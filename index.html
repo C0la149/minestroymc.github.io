@@ -2,7 +2,7 @@
  <head>
   <meta charset="utf-8">
   <title>MineStroyMC</title>
-<script src="playerjs.js" type="text/javascript"></script>
+  <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 </head>
@@ -12,10 +12,22 @@
 <p><font size="5" color="#fff" face="Junegull">Сайт пока-что в разработке</font></p>
 <p><font size="5" color="#fff" face="Junegull">Но ты можешь поиграть на нашем сервере =) (<a href="play.html"><font size="5" color="#fff" face="Junegull">Инструкция)</font></a></p>
 <div style="width:920px;height:526px">
-<div id="player"></div>
+<video id='video'>
+    <source src='http://files.minestroymc.ml/video/MineStroyMC_02022021.mp4' type='video/mp4'/>
+</video>
 
 <script>
-   var player = new Playerjs({id:"player", file:"http://files.minestroymc.ml/video/MineStroyMC_02022021.mp4"});
+fluidPlayer(
+    'video',
+    {
+        layoutControls: {
+            fillToContainer: true,
+			allowTheatre: false,
+			autoPlay: true,
+			primaryColor: "#07ed45"
+        }
+    }
+);
 </script>
 </div>
 <p><font size="2" color="#fff" face="Junegull">Видео от 02.02.2021</font></p>
